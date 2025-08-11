@@ -29,7 +29,7 @@ body {
     text-align: center;
     font-weight: 300;
     font-family: 'FoglihtenNo06', sans-serif;
-    background: linear-gradient(to bottom, white, #d66aff);
+    background: linear-gradient(to bottom, white, #D620FF);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 20px;
@@ -39,7 +39,7 @@ body {
     font-size: 2.2rem;
     font-weight: 300;
     font-family: 'FoglihtenNo06', sans-serif;
-    background: linear-gradient(to bottom, white, #d66aff);
+    background: linear-gradient(to bottom, white, #D620FF);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin: 0;
@@ -79,7 +79,7 @@ body {
 
   .subtitle {
     font-family: 'Marianna', sans-serif;
-    color: #d66aff;
+    color: #D620FF;
     font-size: 2.5rem;
     font-weight: normal; /* или 300 */
     letter-spacing: 0.05em; /* увеличивает расстояние и визуально "разгружает" текст */
@@ -129,8 +129,8 @@ body {
 .glow-on-hover::before {
     content: '';
     background: linear-gradient(45deg,
-        #d66aff, #d66aff, #ffffff, #ffffff,
-        #d66aff, #d66aff, #ffffff, #ffffff, #d66aff);
+        #D620FF, #D620FF, #ffffff, #ffffff,
+        #D620FF, #D620FF, #ffffff, #ffffff, #D620FF);
     position: absolute;
     top: -2px;
     left: -2px;
@@ -187,7 +187,7 @@ body {
   
   .price-table td {
     padding: 2%;
-    border: 1px solid #d66aff;
+    border: 1px solid #D620FF;
     text-align: center;
     color: #fff;
   }
@@ -199,7 +199,7 @@ body {
   }
   
   .service-price {
-    color: #d66aff;
+    color: #D620FF;
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 6px;
@@ -226,7 +226,7 @@ body {
   
   /* Стили кнопки */
   .fancy-button {
-    background: linear-gradient(to bottom, #d66aff, #b600ff);
+    background: linear-gradient(to bottom, #D620FF, #b600ff);
     color: white;
     border: none;
     border-radius: 20px;
