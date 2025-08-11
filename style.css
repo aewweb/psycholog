@@ -1,0 +1,382 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: black;
+    background-image: url('bubbles.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    padding: 16px;
+  }
+  
+  @font-face {
+    font-family: 'FoglihtenNo06';
+    src: url('FoglihtenNo06_076.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Gilroy';
+    src: url('Gilroy-Light.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  h1 {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 300;
+    font-family: 'FoglihtenNo06', sans-serif;
+    background: linear-gradient(to bottom, white, #d66aff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    font-size: 2.2rem;
+    font-weight: 300;
+    font-family: 'FoglihtenNo06', sans-serif;
+    background: linear-gradient(to bottom, white, #d66aff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .center-image {
+    display: block;
+    margin: 0 auto 0 auto;
+    max-width: 90%;
+    height: auto;
+  }
+    
+  @font-face {
+    font-family: 'Marianna';
+    src: url('marianna.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  .main-subtitle {
+    font-family: 'Marianna', sans-serif;
+    color: white;
+    text-align: right;
+    font-size: 2.5rem;
+    font-weight: normal; /* или 300 */
+    letter-spacing: 0.05em; /* увеличивает расстояние и визуально "разгружает" текст */
+    margin: 0;
+    padding: 0;
+  }
+
+  .subtitle {
+    font-family: 'Marianna', sans-serif;
+    color: #d66aff;
+    font-size: 2.5rem;
+    font-weight: normal; /* или 300 */
+    letter-spacing: 0.05em; /* увеличивает расстояние и визуально "разгружает" текст */
+    margin: 0;
+    padding: 0;
+  }
+    
+  .about-section ul {
+    list-style-type: disc;
+  }
+  
+  .about-section li {
+    margin-bottom: 5%;
+    position: relative;
+    font-size: 1rem;
+    font-family: 'Gilroy', sans-serif;
+    font-weight: normal; /* или 300 */
+  }
+  
+  .about-section li::marker {
+    color: #d966ff !important;
+  }
+    
+  .centered-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .glow-on-hover {
+    width: 90%;
+    padding: 14px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Эффект перелива — активен всегда */
+.glow-on-hover::before {
+    content: '';
+    background: linear-gradient(45deg,
+        #d66aff, #d66aff, #ffffff, #ffffff,
+        #d66aff, #d66aff, #ffffff, #ffffff, #d66aff);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    background-size: 400%;
+    filter: blur(5px);
+    z-index: -1;
+    border-radius: 10px;
+    animation: glowing 20s linear infinite;
+    opacity: 1; /* всегда видно */
+}
+
+/* Подложка */
+.glow-on-hover::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    border-radius: 10px;
+}
+
+/* Клик */
+.glow-on-hover:active {
+    color: #000;
+}
+
+.glow-on-hover:active::after {
+    background: transparent;
+}
+
+/* Анимация градиента */
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+  
+  h2 {
+    text-align: center;
+  }
+  
+  /*Таблица со стоимостью*/
+  .price-table {
+    width: 90%;
+    margin: 5px auto;
+    border-collapse: collapse;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .price-table td {
+    padding: 2%;
+    border: 1px solid #d66aff;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .service-title {
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  
+  .service-price {
+    color: #d66aff;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 6px;
+  }
+  
+  .service-duration {
+    font-size: 14px;
+    color: #ccc;
+  }   
+  
+  .button-group {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .glow-button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5% auto;
+  }
+  
+  /* Стили кнопки */
+  .fancy-button {
+    background: linear-gradient(to bottom, #d66aff, #b600ff);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6); /* Белое свечение */
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    padding: 12px;
+    font-weight: bold;
+    font-family: inherit;
+    letter-spacing: normal;
+    text-transform: none;
+  
+    /* Анимация пульсации свечения */
+    animation: glow-pulse 2s infinite ease-in-out;
+  }
+  
+  /* Эффект свечения сверху */
+  .fancy-button::before {
+    content: '';
+    position: absolute;
+    top: -140%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150%;
+    height: 100px;
+    background: url('light.png') no-repeat center top;
+    background-size: contain;
+    pointer-events: none;
+    z-index: 2;
+    opacity: 1;
+  }
+  
+  @keyframes glow-pulse {
+    0% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); }
+    50% { box-shadow: 0 0 40px rgba(255, 255, 255, 0.9); }
+    100% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); }
+  }
+  
+  /* ======= Компьютерная версия ======= */
+@media (min-width: 768px) {
+  body {
+    padding: 0 10%;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  h1 {
+    font-size: 5rem;
+    margin-bottom: -20px;
+  }
+
+  h3 {
+    font-size: 3rem;
+  }
+
+  .main-subtitle {
+    text-align: center;
+    margin-bottom: 2%;
+    font-size: 3rem;
+  }
+
+  .subtitle {
+    font-size: 3rem;
+    margin-top: -5%;
+  }
+  
+  /* Кнопка "Записаться" — делаем крупнее и уже */
+  .glow-on-hover {
+    width: 40%;
+    font-size: 1.2rem;
+    padding: 18px;
+  }
+
+  /* Обертка для двух колонок */
+  .about-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    align-items: flex-start;
+    margin-top: 60px;
+  }
+
+  /* Левая и правая колонки */
+  .about-left,
+  .about-right {
+    flex: 1;
+    max-width: 50%;
+  }
+
+  /* Сохраняем градиентные заголовки */
+  .about-left h3 {
+    text-align: left;
+  }
+
+  .about-right h3 {
+    text-align: right;
+  }
+
+  /* Список в левой колонке */
+  .about-left ul {
+    padding-left: 0; /* убираем стандартные отступы */
+  }
+
+  /* Список в правой колонке */
+  .about-right ul {
+    padding-left: 20px;
+  }
+
+  /* Общие стили для пунктов списка */
+  .about-left li,
+  .about-right li {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+
+  /* Прайс */
+  .price-table {
+    width: 70%;
+    margin: 40px auto;
+    font-size: 1rem;
+  }
+
+  .service-title {
+    font-size: 14px;
+  }
+  
+  .service-price {
+    font-size: 20px;
+  }
+  
+  .service-duration {
+    font-size: 16px;
+  }
+
+  /* Кнопки соцсетей — в ряд с отступами */
+  .glow-button-container {
+    width: 70%;
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+  }
+
+  .fancy-button {
+    padding: 14px 28px;
+    font-size: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  /* При наведении на ПК */
+  .fancy-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 50px rgba(255, 255, 255, 1); /* Усиленное белое свечение */
+  }
+}
+
+  
