@@ -71,6 +71,12 @@ body {
     padding: 0;
   }
 
+  /* Левая и правая колонки */
+  .about-left,
+  .about-right {
+    margin-top: 10%;
+  }
+
   .subtitle {
     font-family: 'Marianna', sans-serif;
     color: #d66aff;
@@ -81,20 +87,20 @@ body {
     padding: 0;
   }
     
-  .about-section ul {
+  .about-wrapper ul {
     list-style-type: disc;
   }
   
-  .about-section li {
+  .about-wrapper li {
     margin-bottom: 5%;
     position: relative;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-family: 'Gilroy', sans-serif;
-    font-weight: normal; /* или 300 */
+    font-weight: 300;
   }
   
-  .about-section li::marker {
-    color: #d966ff !important;
+  .about-wrapper li::marker {
+    color: #d966ff;
   }
     
   .centered-button {
@@ -310,6 +316,7 @@ body {
   .about-right {
     flex: 1;
     max-width: 50%;
+    margin-top: 5%;
   }
 
   /* Сохраняем градиентные заголовки */
