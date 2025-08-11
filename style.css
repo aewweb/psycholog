@@ -97,6 +97,7 @@ body {
     font-size: 0.8rem;
     font-family: 'Gilroy', sans-serif;
     font-weight: 300;
+    list-style-image: url('marker.svg');
   }
   
   .about-wrapper li::marker {
